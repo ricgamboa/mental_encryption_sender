@@ -19,7 +19,7 @@ class UserInterface:
         return switcher.get(language,"invalid language")
 
     def request_senderid(self):
-        self.senderid = input("User id: ")
+        self.senderid = int(input("User id: "))
 
     def show_general_info(self):
         print("Remember the public alphabets are:")

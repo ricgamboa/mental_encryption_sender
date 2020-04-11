@@ -1,7 +1,7 @@
 # Main program used by the sender to receive question and send encrypted answer
 
 
-import server_communicator, user_interface
+import me_sender_server_communicator, me_sender_interface
 
 
 def main():
@@ -9,10 +9,10 @@ def main():
     ALPHABET_SIZE = 4
 
     # Request question
-    communicator = server_communicator.Communicator()
+    communicator = me_sender_server_communicator.Communicator()
     communicator.request_question()
 
-    interface = user_interface.UserInterface(communicator.question)
+    interface = me_sender_interface.UserInterface(communicator.question)
     # Request sender id
     interface.request_senderid()
 
